@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h3>1. null coalescing operator "??"</h3>
+    <p>The nullish coalescing operator ?? provides a short way to choose the first “defined” value from a list.
+        It’s used to assign default values to variables:</p>
+    <p>For example, here we show user if its value isn’t null/undefined, otherwise Anonymous:</p>
+    <p id="coal" style="font-weight:bold;"></p> <br>
+    <h3>2. Optional Chaining Operator "?"</h3>
+    <p>The optional chaining operator (?.) allows you to access the value of a property located
+        deep within a chain of objects without explicitly checking if each reference in the chain is null or undefined
+    </p>
+    <P>Example for optional Chaining with Object</P>
+    <p id="optional" style="font-weight:bold;"></p> <br>
+    <h3>3. Immutability in JavaScript?</h3>
+    <p>Immutability allows us to track the changes that happen to the objects like a chain of events.
+        Variables have new references that are easy to track compared to existing variables.
+        This helps in debugging the code and building the concurrent application.</p>
+    <script>
+        // Example for null coalescing operator
+        const user1 = "John";
+        document.getElementById("coal").innerHTML = (user1 ?? "Anonymous");
+        console.log(user1 ?? "Anonymous"); // John (user is not null/undefined)
+
+        //Example for optional chaining operator
+        const user2 = {
+            language: {
+                name: "English"
+            }
+        };
+        document.getElementById("optional").innerHTML = (user2.country?.name);
+        document.getElementById("optional").innerHTML = (user2.language?.name);
+        console.log(user2.country?.name); //undefined
+        console.log(user2.language?.name); //English
+
+
+    </script>
+
+</body>
+
+</html>

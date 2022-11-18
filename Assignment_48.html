@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Numbers = [175,50,25]</h2>
+    <p>Addition: <span id="add" style="font-weight:bold"> </span></p>
+    <p>Subtraction: <span id="sub" style="font-weight:bold"> </span></p>
+    <p>Average: <span id="avg" style="font-weight:bold"> </span></p>
+
+
+    <script>
+        //Addition
+        const array1 = [175, 50, 25];
+        document.getElementById("add").innerHTML = array1.reduce(getSum, 0);
+        function getSum(total, num) {
+            return total + Math.round(num);
+        }
+
+        //Subtraction
+        const array2 = [175, 50, 25];
+        document.getElementById("sub").innerHTML = array2.reduce(myFunc);
+        function myFunc(total, num) {
+            return total - num;
+        }
+
+        //Average
+        const array3 = [175, 50, 25];
+        document.getElementById("avg").innerHTML = array3.reduce(sum, 0);
+        function sum(total, num) {
+            return (total + Math.round(num) / array3.length);
+        }
+    </script>
+
+</body>
+
+</html>

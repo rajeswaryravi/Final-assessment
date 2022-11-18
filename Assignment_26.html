@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Write a JavaScript program to sort the items of an array</title>
+</head>
+
+<body>
+    <div>
+        <h2>JavaScript Array Sort</h2>
+        <p>Sort the items of an array</p>
+        <p>Input : <span id="input"></span></p>
+        <p>Output : <span id="output"></span></p>
+
+    </div>
+</body>
+<script>
+    const array = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+    document.getElementById("input").innerHTML = array;
+
+    array.sort(function (a, b) { return a - b });
+    document.getElementById("output").innerHTML = array;
+</script>
+
+</html>

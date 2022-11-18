@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <h3>Usage of different scenario of arrow functions</h3>
+        <p style="font-weight:bold;">1. Multi parameter</p>
+        <p id="multi">Example for multi parameter</p>
+        <p style="font-weight:bold;">2. One parameter</p>
+        <p id="one">Example for one parameter</p>
+        <p style="font-weight:bold;">3. No parameter</p>
+        <p id="no">Example for No parameter</p>
+    </div>
+</body>
+<script>
+
+    //Multi parameter, multi line code
+    const sum = (x, y) => {
+        const number = 30;
+        return x + y + number;
+    };
+    document.getElementById("multi").innerHTML = sum(10, 20);
+    console.log(sum(10, 20));
+
+    //One parameter, single line code
+    const oneParam = (name) => "Welcome to the world of " + name
+    document.getElementById("one").innerHTML = oneParam("Javascript");
+    console.log(oneParam("Javascript"));
+
+    //No parameter, single line code
+    const noParam = () => "No Parameters"
+    document.getElementById("no").innerHTML = noParam();
+    console.log(noParam())
+
+</script>
+</body>
+
+</html>

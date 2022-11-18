@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Get the first element of an array</title>
+</head>
+
+
+
+<body>
+    <div>
+        <h3>To get the first element of an array, passing a parameter along with the array</h3>
+        <p>Result of [7, 9, 0, -2] is <span id="result_firstelement1" style="font-weight:bold"></span></p>
+        <p>Result of ([], 3) is <span id="result_firstelement2" style="font-weight:bold"></span></p>
+        <p>Result of ([7, 9, 0, -2], 3) is <span id="result_firstelement3" style="font-weight:bold"></span></p>
+        <p>Result of ([7, 9, 0, -2], 6) is <span id="result_firstelement4" style="font-weight:bold"></span></p>
+        <p>Result of ([7, 9, 0, -2], -3) is <span id="result_firstelement5" style="font-weight:bold"></span></p>
+    </div>
+</body>
+<script>
+    var first = function (array, n) {
+        if (array == null)
+            return void 0;
+        if (n == null)
+            return array[0];
+        if (n < 0)
+            return [];
+        return array.slice(0, n);
+    };
+    document.getElementById("result_firstelement1").innerHTML = first([7, 9, 0, -2]);
+    document.getElementById("result_firstelement2").innerHTML = first([], 3);
+    document.getElementById("result_firstelement3").innerHTML = first([7, 9, 0, -2], 3);
+    document.getElementById("result_firstelement4").innerHTML = first([7, 9, 0, -2], 6);
+    document.getElementById("result_firstelement5").innerHTML = first([7, 9, 0, -2], -3);
+    console.log(first([7, 9, 0, -2]));
+    console.log(first([], 3));
+    console.log(first([7, 9, 0, -2], 3));
+    console.log(first([7, 9, 0, -2], 6));
+    console.log(first([7, 9, 0, -2], -3));
+
+</script>
+
+</html>

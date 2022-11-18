@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript function to find if an array contains a specific element</title>
+</head>
+
+<body>
+    <div>
+        <h3>Function to find if an array contains a specific element</h3>
+        <p>Retrun true/false whether "5" is present in array [2, 5, 9, 6]</p>
+        <p id="contain" style="font-weight:bold;"></p>
+    </div>
+</body>
+<script>
+    function contains(arr, element) {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === element) {
+                return true;
+            }
+        }
+        return false;
+    }
+    arr = [2, 5, 9, 6];
+    document.getElementById("contain").innerHTML = contains(arr, 5);
+    console.log(contains(arr, 5));
+</script>
+
+</html>

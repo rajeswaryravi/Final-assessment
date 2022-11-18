@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Numbers = [175,50,25]</h2>
+    <p>Subtraction using reduce(): <span id="reduce_sub" style="font-weight:bold"> </span></p>
+    <p>Subtraction using reduceRight(): <span id="reduceright_sub" style="font-weight:bold"> </span></p>
+    <script>
+
+        //Subtraction using reduce()
+        const array1 = [175, 50, 25];
+        document.getElementById("reduce_sub").innerHTML = array1.reduce(myFunc);
+        function myFunc(total, num) {
+            return total - num;
+        }
+
+        //Subtraction using reduceRight()
+        const array2 = [175, 50, 25];
+        document.getElementById("reduceright_sub").innerHTML = array2.reduceRight(myFunc);
+        function myFunc(total, num) {
+            return total - num;
+        }
+    </script>
+
+</body>
+
+</html>

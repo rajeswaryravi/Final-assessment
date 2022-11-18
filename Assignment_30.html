@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript function to remove a specific element from an array</title>
+</head>
+
+<body>
+    <div>
+        <h3>Remove a specific element from an array</h3>
+        <p>New array after removed element "5" from the given array [2, 5, 9, 6] is [<span id="remove_element"
+                style="font-weight:bold;"></span>]</p>
+    </div>
+</body>
+<script>
+    function remove_array_element(array, n) {
+        var index = array.indexOf(n);
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+        return array;
+    }
+    document.getElementById("remove_element").innerHTML = (remove_array_element([2, 5, 9, 6], 5));
+    console.log(remove_array_element([2, 5, 9, 6], 5));
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<html>
+<style>
+    .container {
+        margin: 50px 50px;
+        border: 2px solid #000;
+    }
+
+    h3 {
+        background-color: #0a5794;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .age_calc {
+        background-color: #e2e2e2;
+    }
+
+    .age_calc_btn,
+    #btnCalculate2 {
+        background-color: green;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin-left: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h3>Modify the values and click the Calculate button to use</h3>
+        <div class="age_calc">
+            <label>Date of Birth</label>
+            <input type="date" id="txtStartDate" /> <br><br>
+            <label>Age at the Date of</label>
+            <input type="date" id="txtEndDate" /> <br><br>
+            <button class="age_calc_btn" onclick="ageCalculator();">Age Calculate</button>&nbsp;
+            <button id="btnCalculate2" onclick="fnCalculateAgeFromGivesDates();">Calculate Age on specific date</button>
+
+            <h3 style="color:32A80F" id="result" align="center"></h3>
+            <h3 style="color:32A80F" id="age_result" align="center"></h3>
+        </div>
+    </div>
+    <script>
+        function ageCalculator() {
+            var userinput = document.getElementById("txtStartDate").value;
+            var dob = new Date(userinput);
+            if (userinput == null || userinput == '') {
+                document.getElementById("message").innerHTML = "**Choose a date please!";
+                return false;
+            } else {
+
+                //calculate month difference from current date in time
+                var month_diff = Date.now() - dob.getTime();
+
+                //convert the calculated difference in date format
+                var age_dt = new Date(month_diff);
+
+                //extract year from date    
+                var year = age_dt.getUTCFullYear();
+
+                //now calculate the age of the user
+                var age = Math.abs(year - 1970);
+
+                //display the calculated age
+                return document.getElementById("result").innerHTML =
+                    "Age is: " + age + " years. ";
+            }
+        }
+        function fnCalculateAgeFromGivesDates() {
+            var startDateInput = document.getElementById("txtStartDate").value;
+            var endDateInput = document.getElementById("txtEndDate").value;
+
+            // convert user input values into date object
+            var startDate = new Date(startDateInput);
+            var endDate = new Date(endDateInput);
+
+            // get difference between two date;
+            var difference = endDate - startDate.getTime();
+
+            var ageDate = new Date(difference);
+            var calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+            document.getElementById("age_result").innerHTML = "Age on the specific date is: " + calculatedAge;
+        }
+
+    </script>
+</body>
+
+</html>

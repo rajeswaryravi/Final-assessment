@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JavaScript Array Join</title>
+</head>
+
+
+<body>
+    <div>
+        <h3>To join all elements of the following array into a string</h3>
+        <h3>myColor = ["Red", "Green", "White", "Black"];</h3>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+    </div>
+</body>
+<script>
+    myColor = ["Red", "Green", "White", "Black"];
+    document.getElementById("result1").innerHTML = myColor.toString();
+    document.getElementById("result2").innerHTML = myColor.join();
+    document.getElementById("result3").innerHTML = myColor.join('+');
+</script>
+
+</html>

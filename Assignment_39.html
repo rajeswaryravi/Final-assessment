@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <h3>JavaScript program to check whether the string has '$' symbol in it</h3>
+        <p>Sample Input : Javascipt$</p>
+        <p id="specail_symbol" style="font-weight:bold;"></p>
+        <p id="specail_symbol_final" style="font-weight:bold;"></p>
+    </div>
+</body>
+<script>
+    var string = /[$]/;
+    try {
+        if (string.test("Javascipt$")) {
+            throw "Invalid Name";
+            console.log("Invalid Name");
+        }
+        else {
+            document.getElementById("specail_symbol").innerHTML = "Valid Name"
+            console.log("Valid Name")
+        }
+    }
+    catch (err) {
+        document.getElementById("specail_symbol").innerHTML = ("Error - " + err);
+        console.log("Error - " + err);
+    }
+    finally {
+        document.getElementById("specail_symbol_final").innerHTML = "This JavaScript program to check whether the string has '$' symbol in it"
+        console.log("This JavaScript program to check whether the string has '$' symbol in it");
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        .container {
+            margin: 0 auto;
+            border: 5px solid #000;
+            height: 500px;
+        }
+
+        #div1,
+        #div2 {
+            float: left;
+            width: 500px;
+            height: 350px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        h2,
+        p {
+            margin-left: 30px;
+        }
+
+        .div_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Drag and Drop</h2>
+        <p>Drag Cat between these two elements.</p>
+        <div class="div_container">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="images/cat.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="350"
+                    height="300">
+            </div>
+
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+</body>
+
+</html>

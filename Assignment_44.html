@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<div>
+    <h3>Object Concepts</h3>
+    <p style="font-weight:bold;">Object using object literal</p>
+    <p id="objectliteral1"></p>
+    <p id="objectliteral2"></p><br>
+    <p style="font-weight:bold;">Object.values</p>
+    <p id="objectvalue"></p><br>
+    <p style="font-weight:bold;">Property names and values</p>
+    <p>Properties : <span id="propertyvalue1"></span> </p>
+    <p>Values : <span id="propertyvalue2"></span></p>
+</div>
+
+<body>
+
+</body>
+<script>
+    // code for object using object literal
+    let book = {
+        "title": "Eloquent JavaScript",
+        author: {
+            firstName: "Marijn",
+            lastName: "Haverbeke"
+        },
+        getAuthorName: function () { return this.author.firstName + ' ' + this.author.lastName }
+
+    };
+    document.getElementById("objectliteral1").innerHTML = book.title;
+    document.getElementById("objectliteral2").innerHTML = book.getAuthorName();
+    console.log(book.title);
+    console.log(book.getAuthorName());
+
+    // Using Object.values
+    const obj = { lanhuage: 'English', mark: 99 };
+    document.getElementById("objectvalue").innerHTML = Object.values(obj);
+    console.log(Object.values(obj));
+
+    //program to get property name and its values
+    const obj1 = { 0: 'India', 1: 'USA', 2: 'UK' };
+
+    document.getElementById("propertyvalue1").innerHTML = Object.getOwnPropertyNames(obj1);
+    document.getElementById("propertyvalue2").innerHTML = Object.values(obj1);
+    console.log(Object.getOwnPropertyNames(obj1));
+    console.log(Object.values(obj1));
+
+</script>
+
+</html>

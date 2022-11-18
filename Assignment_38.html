@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Functions</h2>
+    <p>Example for Rest operators : <span id="rest"></span></p>
+    <p>Example for Spread operators : <span id="spread"></span></p>
+    <p>Example for Array destructuring : <span id="dsyear"></span> <span id="dsmonth"></span> <span id="dsday"></span></p>
+</body>
+<script>
+    // concept of rest parameter
+    function sum(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+    }
+    let x = sum(4, 9, 16, 25, 29, 100, 66);
+    document.getElementById("rest").innerHTML = x;
+
+    // concept of spread operator
+    const numbers = [23, 55, 21, 87, 56];
+    let maxValue = Math.max(...numbers);
+    document.getElementById("spread").innerHTML = maxValue;
+
+    // concept of destructuring
+    const date = ['1970', '12', '01']
+    const [year, month, day] = date
+    document.getElementById("dsyear").innerHTML = year;
+    document.getElementById("dsmonth").innerHTML = month;
+    document.getElementById("dsday").innerHTML = day;
+   
+
+</script>
+
+</html>

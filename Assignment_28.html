@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Swap the case of each character of a string</title>
+</head>
+
+<body>
+    <h3>Swap the case of each character of a string</h3>
+    <p>Swap the case of "The Quick Brown Fox" is <span id="swap_case" style="font-weight:bold;"></span> </p>
+</body>
+<script>
+    var str = 'The Quick Brown Fox';
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result = [];
+
+    for (var x = 0; x < str.length; x++) {
+        if (UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+        }
+        else if (LOWER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toUpperCase());
+        }
+        else {
+            result.push(str[x]);
+        }
+    }
+    document.getElementById("swap_case").innerHTML = result.join('');
+    console.log(result.join(''));
+</script>
+
+</html>

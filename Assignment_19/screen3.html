@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Details</title>
+    <style>
+        h3 {
+            width: 100%;
+            background-color: #a9d1c3;
+            color: #000;
+            padding: 20px 50px;
+        }
+
+        .inlabel {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            border-top: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #next {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Good Job!</h3>
+    <p>Question 2:</p>
+    <p>How can you get the total number of arguments passed to a function?</p>
+    <div class="inlabel">
+        <input type="radio" id="ans1" name="ans">
+        <label for="ans1">Using args.length property</label><br>
+    </div>
+    <div class="inlabel">
+        <input type="radio" id="ans2" name="ans">
+        <label for="ans2">Using arguments.length property</label><br>
+    </div>
+    <div class="inlabel">
+        <input type="radio" id="ans3" name="ans">
+        <label for="ans3">Both of the above.</label><br>
+    </div>
+    <div class="inlabel">
+        <input type="radio" id="ans4" name="ans">
+        <label for="ans4">None</label><br>
+    </div>
+    <div class="footer">
+        <div>
+            <p>Question 2 of 7</p>
+        </div>
+        <div>
+            <input type="submit" id="next" value="Next" onclick="next()">
+        </div>
+    </div>
+</body>
+
+<script>
+    function next() {
+        location.assign("screen4.html");
+    }
+</script>
+
+</html>

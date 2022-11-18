@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Get last and last n elements of an array</title>
+</head>
+
+
+<body>
+    <div>
+        <h3>To get the last element of an array, passing a parameter along with the array</h3>
+        <p>Result of [7, 9, 0, -2] is <span id="result_lastelement1" style="font-weight:bold"></span></p>
+        <p>Result of ([7, 9, 0, -2], 3) is <span id="result_lastelement2" style="font-weight:bold"></span></p>
+        <p>Result of ([7, 9, 0, -2], 6) is <span id="result_lastelement3" style="font-weight:bold"></span></p>
+    </div>
+</body>
+<script>
+    var last = function (array, n) {
+        if (array == null)
+            return void 0;
+        if (n == null)
+            return array[array.length - 1];
+        return array.slice(Math.max(array.length - n, 0));
+    };
+    document.getElementById("result_lastelement1").innerHTML = last([7, 9, 0, -2]);
+    document.getElementById("result_lastelement2").innerHTML = last([7, 9, 0, -2], 3);
+    document.getElementById("result_lastelement3").innerHTML = last([7, 9, 0, -2], 6);
+    console.log(last([7, 9, 0, -2]));
+    console.log(last([7, 9, 0, -2], 3));
+    console.log(last([7, 9, 0, -2], 6));
+</script>
+
+</html>

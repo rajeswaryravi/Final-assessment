@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border-top: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        #button {
+            background: red;
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Satinder Singh</td>
+            <td>Male</td>
+            <td>Bombay</td>
+            <td><input type="button" id="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        <tr>
+            <td>Leslie Mac</td>
+            <td>Female</td>
+            <td>Queensland</td>
+            <td><input type="button" id="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        <tr>
+            <td>Andrea ely</td>
+            <td>Female</td>
+            <td>Rio</td>
+            <td><input type="button" id="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Amit Sarna</td>
+            <td>Male</td>
+            <td>Navi Mumbai</td>
+            <td><input type="button" id="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>David Miller</td>
+            <td>Male</td>
+            <td>Scouthe</td>
+            <td><input type="button" id="button" value="Delete" onclick="deleteRow(this)"></td>
+        </tr>
+    </table>
+
+    <script>
+        function deleteRow(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("myTable").deleteRow(i);
+        }
+    </script>
+
+</body>
+
+</html>

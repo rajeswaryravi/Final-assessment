@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<style>
+    body {
+        margin: 50px 350px;
+        border: 1px solid;
+    }
+
+    .content {
+        margin: 20px 20px;
+        padding: 20px;
+        background-color: #ebe8e8;
+    }
+
+    #email,
+    #pwd {
+        width: 315px;
+        margin: 10px 80px;
+        height: 30px;
+    }
+
+    #remember {
+        margin-left: 80px;
+    }
+
+    #btn_signin {
+        padding: 7px;
+        width: 320px;
+        margin: 10px 80px;
+        background: #49849f;
+        border: none;
+        color: #fff;
+    }
+
+    p {
+        color: #49849f;
+        margin-left: 80px;
+    }
+
+    img {
+        border-radius: 80px;
+        margin-left: 165px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="img">
+                <img src="image/user.png" alt="user_pic">
+            </div>
+            <div>
+                <form>
+                    <input type="text" id="email" placeholder="Email Address"><br>
+                    <input type="text" id="pwd" placeholder="Password"><br>
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label><br>
+                    <input type="submit" id="btn_signin" value="Sign In" onclick="signin()"><br>
+                    <p>Forgot the password?</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function signin() {
+        //Receiving data
+        var user_email = document.getElementById("email").value;
+        var user_password = document.getElementById("pwd").value;
+
+        //Storing in local storage
+        var us_email = localStorage.setItem("user_email", user_email);
+        var us_password = localStorage.setItem("user_password", user_password);
+
+        //Retrieving data from local storage
+        var us_email = localStorage.getItem("user_email", user_email);
+        var us_password = localStorage.getItem("user_password", user_password);
+
+        var a = "abc@gmail.com";
+        var b = 1234;
+
+        if (a != "" && b != "") {
+            alert("Login Successful");
+        }
+        else {
+            alert("Invalid User details");
+        }
+
+    }
+</script>
+
+</html>

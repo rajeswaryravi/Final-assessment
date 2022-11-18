@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript function to sort the array of objects by title value.</title>
+</head>
+
+<body>
+    <div>
+        <p>
+        <h3>Function to sort the array of objects by title value</h3>
+        Sort by title value of library = [
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+        ] is
+        </p>
+        <p id="sort_by_title" style="font-weight:bold"></p>
+    </div>
+</body>
+<script>
+    const library = [
+        { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+        { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 },
+        { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 }
+    ];
+
+    function compare_to_sort(x, y) {
+        if (x.title < y.title)
+            return -1;
+        if (x.title > y.title)
+            return 1;
+        return 0;
+    }
+    document.getElementById("sort_by_title").innerHTML = JSON.stringify(library.sort(compare_to_sort));
+    console.log(library.sort(compare_to_sort));
+</script>
+
+</html>

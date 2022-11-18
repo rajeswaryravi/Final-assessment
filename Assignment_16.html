@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Slider</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes slide {
+        0% {
+            left: 0;
+        }
+
+        10% {
+            left: 0;
+        }
+
+        20% {
+            left: -100%;
+        }
+
+        30% {
+            left: -100%;
+        }
+
+        40% {
+            left: -200%;
+        }
+
+        50% {
+            left: -200%;
+        }
+
+        60% {
+            left: -300%;
+        }
+
+        70% {
+            left: -300%;
+        }
+
+        80% {
+            left: -400%;
+        }
+
+        90% {
+            left: -400%;
+        }
+
+        100% {
+            left: 0%;
+        }
+    }
+
+    figure {
+        height: 100px;
+    }
+
+    #slider {
+        overflow: hidden;
+    }
+
+    #slider figure img {
+        float: left;
+        width: 20%;
+        height: 600%;
+    }
+
+    #slider figure {
+        position: relative;
+        width: 500%;
+        animation: slide 20s infinite;
+    }
+</style>
+
+<body>
+    <div id="slider">
+        <figure>
+            <img src="images/banner1.jfif" alt="img1">
+            <img src="images/banner2.jpg" alt="img2">
+            <img src="images/banner3.jfif" alt="img3">
+            <img src="images/banner4.jfif" alt="img4">
+            <img src="images/banner5.jpg" alt="img5">
+        </figure>
+    </div>
+</body>
+
+</html>
